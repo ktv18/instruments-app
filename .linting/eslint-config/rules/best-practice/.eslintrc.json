@@ -1,0 +1,20 @@
+{
+	"rules": {
+		"curly": ["error", "multi-line"],
+		"default-case": "error",
+		"eqeqeq": "error",
+		"no-alert": "error",
+		"no-extra-bind": "error",
+		"no-implicit-globals": "error",
+		"no-lone-blocks": "error",
+		"no-multi-spaces": "error",
+		"no-return-assign": "error",
+		"no-self-compare": "error",
+		"no-sequences": "error",
+		"no-throw-literal": "error",
+		"no-unused-expressions": "error",
+		"vars-on-top": "error",
+		"wrap-iife": ["error", "inside"],
+		"yoda": "error"
+	}
+}

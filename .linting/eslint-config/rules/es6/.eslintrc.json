@@ -1,0 +1,20 @@
+{
+	"rules": {
+		"arrow-parens": ["error", "always"],
+		"arrow-spacing": "error",
+		"generator-star-spacing": ["error", "after"],
+		"no-duplicate-imports": "error",
+		"no-useless-computed-key": "error",
+		"no-useless-constructor": "error",
+		"no-var": "error",
+		"object-shorthand": "error",
+		"prefer-arrow-callback": "error",
+		"prefer-const": "error",
+		"prefer-rest-params": "error",
+		"prefer-spread": "error",
+		"prefer-template": "error",
+		"require-yield": "error",
+		"template-curly-spacing": "error",
+		"yield-star-spacing": ["error", "after"]
+	}
+}
