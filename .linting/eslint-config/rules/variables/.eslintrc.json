@@ -1,0 +1,11 @@
+{
+	"rules": {
+		"no-undef": "error",
+		"no-undef-init": "error",
+		"no-undefined": "error",
+		"no-use-before-define": ["error", {
+			"functions": false,
+			"classes": false
+		}]
+	}
+}
