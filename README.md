@@ -17,4 +17,4 @@ The following are required for working:
 
 ## Project documentation
 
-This project is based on Facebook's CRA boilerplate: [CRA documentation](docs/CRA.md).
+This project is based on Facebook's CRA boilerplate: [CRA documentation](https://github.com/facebook/create-react-app).
