@@ -9,7 +9,7 @@ The following are required for working:
 
 | Script                |Purpose                                           |
 |-----------------------|--------------------------------------------------|
-|`yarn install`         |Installs all depenependencie                      |
+|`yarn install`         |Installs all depenependencies                     |
 |`yarn start`           |Starts the development environment                |
 |`yarn storybook`       |Starts the component development environment      |
 |`yarn build`           |Builds the production application                 |
