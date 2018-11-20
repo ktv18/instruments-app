@@ -1,9 +1,15 @@
 # Simple React app for managing instruments
 
+## Getting started
+The following are required for working:
+- [Node.js](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/en/docs/install)
+
 ## Scripts
 
 | Script                |Purpose                                           |
 |-----------------------|--------------------------------------------------|
+|`yarn install`         |Installs all depenependencie                      |
 |`yarn start`           |Starts the development environment                |
 |`yarn storybook`       |Starts the component development environment      |
 |`yarn build`           |Builds the production application                 |
