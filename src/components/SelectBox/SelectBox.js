@@ -10,20 +10,16 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import { createMuiTheme, MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 
-const stylesObj = (theme) => ({
+const stylesObj = () => ({
 	formControl: {
-		margin: theme.spacing.unit,
-		width: '90%',
-	},
-	selectEmpty: {
-		marginTop: theme.spacing.unit * 2,
+		marginTop: '24px',
 	},
 });
 
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			main: '#2bd1b3',
+			main: 'rgb(43, 209, 179)',
 			contrastText: '#fff',
 		},
 	},
@@ -88,6 +84,7 @@ class SelectBox extends Component {
 		return (
 			<MuiThemeProvider theme={theme}>
 				<FormControl
+					fullWidth
 					variant={outlined ? 'outlined' : ''}
 					className={classes.formControl}
 					error={error}
