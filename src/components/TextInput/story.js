@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs/react';
-
-import TextInput from './TextInput';
-
+import { withCustomMuiTheme } from '../../HOC';
+import TextInput_ from './TextInput';
+const TextInput = withCustomMuiTheme(TextInput_);
 const props = () => ({
 	error: boolean('error', false),
 	label: text('label', 'Cost'),

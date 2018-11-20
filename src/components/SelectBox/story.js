@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs/react';
-
-import SelectBox from './SelectBox';
-
+import { withCustomMuiTheme } from '../../HOC';
+import SelectBox_ from './SelectBox';
+const SelectBox = withCustomMuiTheme(SelectBox_);
 const options = [
 	{
 		value: '_id_1',
