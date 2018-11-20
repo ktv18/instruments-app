@@ -2,8 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, selectV2 } from '@storybook/addon-knobs/react';
-
-import Button from './Button';
+import { withCustomMuiTheme } from '../../HOC';
+import Button_ from './Button';
+const Button = withCustomMuiTheme(Button_);
 
 const props = ({
 	defaultText = 'Example',

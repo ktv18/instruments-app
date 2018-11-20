@@ -1,33 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { FormDialog, InstrumentsWrapper } from './components';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { httpApi } from './utils';
+import { withCustomMuiTheme } from './HOC';
 import './App.css';
 
-const theme = createMuiTheme({
-	palette: {
-		primary: {
-			main: 'rgb(43, 209, 179)',
-			contrastText: '#fff',
-		},
-		bla: {
-			main: 'red',
-		},
-		secondary: {
-			main: '#2b4bd1',
-		},
-	},
-	typography: {
-		h5: {
-			color: '#4c4f58',
-		},
-	},
-});
+const API = 'apiHost/api/v1';
 
 class App extends Component {
 
 	state = {
 		dialogOpen: false,
 		instruments: [],
+	}
+
+	componentDidMount () {
+		this.fetchInstruments();
+	}
+
+	async fetchInstruments () {
+		const url = `${API}/instruments`;
+		try {
+			const res = await httpApi.get(url);
+			const instruments = await res.json();
+			this.setState({ instruments });
+		} catch (error) {
+			// TODO: Handle error.
+			console.log(error);
+		}
+	}
+
+	async createInstrumentFetch (instument) {
+		const url = `${API}/instruments`;
+		try {
+			const { status } = await httpApi.post(url, instument);
+			if (status !== 200) {
+				throw new Error('could not create an instrument');
+			}
+		} catch (error) {
+			// TODO: Handle error.
+			console.log(error);
+		}
 	}
 
 	handleAddButtonClick = () =>
@@ -38,12 +50,14 @@ class App extends Component {
 
 	handleAddInstrument = (instrument) => {
 		const instruments = [...this.state.instruments, instrument];
+		this.createInstrumentFetch(instrument);
 		this.setState({ instruments, dialogOpen: false });
 	}
+
 	render () {
 		const { instruments } = this.state;
 		return (
-			<MuiThemeProvider theme={theme}>
+			<Fragment>
 				<InstrumentsWrapper
 					instruments={instruments}
 					title='Instruments'
@@ -54,9 +68,9 @@ class App extends Component {
 					onClose={this.handleDialogClose}
 					onSubmit={this.handleAddInstrument}
 				/>
-			</MuiThemeProvider>
+			</Fragment>
 		);
 	}
 }
 
-export default App;
+export default withCustomMuiTheme(App);
