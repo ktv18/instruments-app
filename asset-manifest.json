@@ -1,13 +1,13 @@
 {
-  "main.css": "/instruments-app/static/css/main.1a73b261.chunk.css",
-  "main.js": "/instruments-app/static/js/main.ccfa377d.chunk.js",
-  "main.js.map": "/instruments-app/static/js/main.ccfa377d.chunk.js.map",
-  "static/js/1.c91e7d14.chunk.js": "/instruments-app/static/js/1.c91e7d14.chunk.js",
-  "static/js/1.c91e7d14.chunk.js.map": "/instruments-app/static/js/1.c91e7d14.chunk.js.map",
-  "runtime~main.js": "/instruments-app/static/js/runtime~main.84272a64.js",
-  "runtime~main.js.map": "/instruments-app/static/js/runtime~main.84272a64.js.map",
-  "static/css/main.1a73b261.chunk.css.map": "/instruments-app/static/css/main.1a73b261.chunk.css.map",
-  "index.html": "/instruments-app/index.html",
-  "precache-manifest.036a31f684a04a0de938f09c64a9f578.js": "/instruments-app/precache-manifest.036a31f684a04a0de938f09c64a9f578.js",
-  "service-worker.js": "/instruments-app/service-worker.js"
+  "main.css": "/static/css/main.1a73b261.chunk.css",
+  "main.js": "/static/js/main.4d39e2cd.chunk.js",
+  "main.js.map": "/static/js/main.4d39e2cd.chunk.js.map",
+  "static/js/1.c91e7d14.chunk.js": "/static/js/1.c91e7d14.chunk.js",
+  "static/js/1.c91e7d14.chunk.js.map": "/static/js/1.c91e7d14.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.1a73b261.chunk.css.map": "/static/css/main.1a73b261.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.84418337c50e617a6fcbc5207cc54539.js": "/precache-manifest.84418337c50e617a6fcbc5207cc54539.js",
+  "service-worker.js": "/service-worker.js"
 }
