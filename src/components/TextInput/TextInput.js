@@ -1,33 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import TextField from '@material-ui/core/TextField';
-import { createMuiTheme, MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 
-const stylesObj = (theme) => ({
-	root: {
-		display: 'flex',
-		flexWrap: 'wrap',
-	},
-	margin: {
-		margin: theme.spacing.unit,
-	},
-	textField: {
-		width: '90%',
-		flexBasis: 200,
-	},
-});
-
-const theme = createMuiTheme({
-	palette: {
-		primary: {
-			main: '#2bd1b3',
-			contrastText: '#fff',
-		},
-	},
-});
-
-class TextInput extends Component {
+export default class TextInput extends Component {
 
 	state = {
 		value: '',
@@ -51,34 +26,20 @@ class TextInput extends Component {
 	}
 	render () {
 		const {
-			classes,
-			InputProps = {},
-			label = '',
-			multiline,
-			placeholder = '',
 			error,
-			helperText,
+			fullWidth = true,
 			errorMessage,
+			variant = 'outlined',
+			helperText,
 		} = this.props;
 		return (
-			<MuiThemeProvider theme={theme}>
-				<TextField
-					error={error}
-					id='outlined-name'
-					placeholder={placeholder}
-					label={label}
-					multiline={multiline}
-					className={classNames(classes.margin, classes.textField)}
-					value={this.state.value}
-					onChange={this.handleChange}
-					margin='normal'
-					variant='outlined'
-					InputProps={InputProps}
-					helperText={error ? errorMessage : helperText }
-				/>
-			</MuiThemeProvider>
+			<TextField
+				{...this.props}
+				onChange={this.handleChange}
+				variant={variant}
+				fullWidth={fullWidth}
+				helperText={error ? errorMessage : helperText }
+			/>
 		);
 	}
 }
-
-export default withStyles(stylesObj)(TextInput);

@@ -1,0 +1,13 @@
+
+.paper {
+	padding: 16px;
+}
+
+.blocks {
+	margin-top: 24px;
+	display: flex;
+}
+
+.block {
+	margin-right: 16px;
+}
