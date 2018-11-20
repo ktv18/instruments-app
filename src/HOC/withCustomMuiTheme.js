@@ -12,6 +12,7 @@ const theme = createMuiTheme({
 		},
 	},
 	typography: {
+		useNextVariants: true,
 		h5: {
 			color: '#4c4f58',
 		},

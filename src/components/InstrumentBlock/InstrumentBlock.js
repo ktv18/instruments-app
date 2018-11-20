@@ -21,7 +21,9 @@ export default class InstrumentBlock extends Component {
 						className={styles.InstrumentBlock}
 						variant='contained'
 						color='secondary'
-					/>
+					>
+						<span />
+					</Button>
 				</Tooltip>
 			</div>
 		);

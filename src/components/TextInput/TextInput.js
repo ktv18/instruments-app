@@ -31,13 +31,15 @@ export default class TextInput extends Component {
 			errorMessage,
 			variant = 'outlined',
 			helperText,
+			...rest
 		} = this.props;
 		return (
 			<TextField
-				{...this.props}
+				{...rest}
 				onChange={this.handleChange}
 				variant={variant}
 				fullWidth={fullWidth}
+				error={error}
 				helperText={error ? errorMessage : helperText }
 			/>
 		);

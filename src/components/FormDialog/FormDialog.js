@@ -192,7 +192,7 @@ class FormDialog extends Component {
 									onChange={this.handleInputChange('description')}
 									multiline
 									label='Description'
-									inputProps={{ maxlength: 300 }}
+									inputProps={{ maxLength: 300 }}
 									helperText='Up to 300 characters'
 									error={this.shouldShowError('description')}
 									errorMessage={VALIDATION_ERROR}
