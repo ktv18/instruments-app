@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import withMobileDialog from '@material-ui/core/withMobileDialog';
 import Button from '../Button';
 import SelectBox from '../SelectBox';
 import TextInput from '../TextInput';
@@ -69,6 +70,7 @@ class FormDialog extends Component {
 
 	static propTypes = {
 		classes: PropTypes.object,
+		fullScreen: PropTypes.bool.isRequired,
 		onClose: PropTypes.func,
 		onSubmit: PropTypes.func.isRequired,
 		open: PropTypes.bool,
@@ -138,10 +140,11 @@ class FormDialog extends Component {
 	}
 
 	render () {
-		const { open, classes } = this.props;
+		const { open, classes, fullScreen } = this.props;
 		return (
 			<Fragment>
 				<Dialog
+					fullScreen={fullScreen}
 					open={open}
 					classes={{ paper: styles.dialogPaper }}
 					onClose={this.handleClose}
@@ -202,7 +205,11 @@ class FormDialog extends Component {
 									placeholder='Cost'
 									InputProps={{
 										startAdornment: (
-											<InputAdornment position='start'>$</InputAdornment>
+											<InputAdornment
+												classes={{ root: styles.InputAdornment }}
+												position='start'>
+												$
+											</InputAdornment>
 										),
 									}}
 									error={this.shouldShowError('cost')}
@@ -232,4 +239,4 @@ class FormDialog extends Component {
 		);
 	}
 }
-export default withStyles(stylesObj)(FormDialog);
+export default withMobileDialog()(withStyles(stylesObj)(FormDialog));

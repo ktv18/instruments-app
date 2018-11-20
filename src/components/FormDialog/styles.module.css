@@ -1,6 +1,8 @@
-.dialogPaper {
-	width: 411px;
-	height: 587px;
+@media (min-width: 769px) {
+	.dialogPaper {
+		width: 411px;
+		height: 587px;
+	}
 }
 
 .header {
@@ -26,7 +28,17 @@
 	align-self: flex-end;
 }
 
+.actions button {
+	font-size: 16px;
+	text-transform: none;
+	margin-left: 10px;
+}
+
 .formContent {
 	flex-grow: 1;
 	padding: 30px;
+}
+
+.InputAdornment p {
+	font-size: 1.5em;
 }

@@ -37,7 +37,9 @@ export default class InstrumentsWrapper extends Component {
 								name={name}
 							/>
 						))}
-						<AddInstrumentButton onClick={onAddInstrument} aria-label='Add instrument' />
+						<AddInstrumentButton
+							onClick={onAddInstrument}
+							aria-label='Add instrument' />
 					</div>
 				</Paper>
 			</div>

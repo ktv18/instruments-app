@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { FormDialog, InstrumentsWrapper } from './components';
 import { httpApi } from './utils';
 import { withCustomMuiTheme } from './HOC';
-import './App.css';
+import styles from './App.module.css';
 
 const API = 'apiHost/api/v1';
 
@@ -59,6 +59,7 @@ class App extends Component {
 		return (
 			<Fragment>
 				<InstrumentsWrapper
+					className={styles.instrumentsWrapper}
 					instruments={instruments}
 					title='Instruments'
 					onAddInstrument={this.handleAddButtonClick}
