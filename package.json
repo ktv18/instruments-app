@@ -2,10 +2,12 @@
   "name": "instruments-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/ktv18/instruments-app",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
     "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
@@ -18,7 +20,9 @@
     "eject": "react-scripts eject",
     "lint-css": "stylelint 'src/**/*.css'",
     "lint-js": "eslint ./src",
-    "lint": "yarn lint-js && yarn lint-css"
+    "lint": "yarn lint-js && yarn lint-css",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
