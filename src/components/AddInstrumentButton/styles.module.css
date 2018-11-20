@@ -1,4 +1,10 @@
 .addInstrumentButton {
 	height: 91px;
 	width: 93px;
+	background-color: rgba(43, 209, 179, .1) !important;
+}
+
+.addInstrumentButton svg {
+	color: rgb(43, 209, 179);
+	transform: scale(1.5);
 }

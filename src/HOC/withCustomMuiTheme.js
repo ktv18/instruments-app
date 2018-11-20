@@ -7,11 +7,8 @@ const theme = createMuiTheme({
 			main: 'rgb(43, 209, 179)',
 			contrastText: '#fff',
 		},
-		bla: {
-			main: 'red',
-		},
 		secondary: {
-			main: '#2b4bd1',
+			main: 'rgb(43, 75, 209)',
 		},
 	},
 	typography: {
